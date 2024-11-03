@@ -33,7 +33,7 @@ class Application(object):
     return self.thread.is_alive() and self.popen
 
   def wait_finish(self):
-    self.thread.join(5)
+    self.thread.join(60)
     if self.thread.is_alive():
       self.popen.terminate()
       return False
